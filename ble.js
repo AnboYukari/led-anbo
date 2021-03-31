@@ -1,6 +1,7 @@
 let device = null;
 let chracteristics = null;
 let isConnetted = false;
+let btnc = 0;
 
 async function onButtonClick()
 {
@@ -70,19 +71,30 @@ function sendData(e)
 
       const encoder = new TextEncoder('utf-8');
       let ch = characteristics[0];
+      if(btnc == 1){
       ch.writeValue(encoder.encode("Data from PC")).then(
         char => {ch.startNotifications();}
       );
+      }else if(btnc == 2){
+        ch.writeValue(encoder.encode("Data from PC blue")).then(
+        char => {ch.startNotifications();}
+      }else if(btnc == 3){
+        ch.writeValue(encoder.encode("Data from PC red")).then(
+        char => {ch.startNotifications();}
+      }
     }
   }
 }
 
 let btn = document.getElementById('send_button');
+btn.addEventListener('click',btnc = 1 );
 btn.addEventListener('click',sendData );
-let btn = document.getElementById('send_button-blue');
-btn.addEventListener('click',sendData );
-let btn = document.getElementById('send_button-led');
-btn.addEventListener('click',sendData );
+let btn1 = document.getElementById('send_button-blue');
+btn.addEventListener('click',btnc = 2 );
+btn1.addEventListener('click',sendData );
+let btn2 = document.getElementById('send_button-led');
+btn.addEventListener('click',btnc = 3 );
+btn2.addEventListener('click',sendData );
 
 
 async function sleep(ms) {
