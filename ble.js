@@ -79,6 +79,10 @@ function sendData(e)
 
 let btn = document.getElementById('send_button');
 btn.addEventListener('click',sendData );
+let btn = document.getElementById('send_button-blue');
+btn.addEventListener('click',sendData );
+let btn = document.getElementById('send_button-led');
+btn.addEventListener('click',sendData );
 
 
 async function sleep(ms) {
