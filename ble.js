@@ -78,9 +78,11 @@ function sendData(e)
       }else if(btnc == 2){
         ch.writeValue(encoder.encode("Data from PC blue")).then(
         char => {ch.startNotifications();}
+      );
       }else if(btnc == 3){
         ch.writeValue(encoder.encode("Data from PC red")).then(
         char => {ch.startNotifications();}
+      );
       }
     }
   }
