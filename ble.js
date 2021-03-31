@@ -89,13 +89,13 @@ function sendData(e)
 }
 
 let btn = document.getElementById('send_button');
-btn.addEventListener('click',btnc = 1 );
+btn.addEventListener('click',btnc = 1; );
 btn.addEventListener('click',sendData );
 let btn1 = document.getElementById('send_button-blue');
-btn.addEventListener('click',btnc = 2 );
+btn.addEventListener('click',btnc = 2; );
 btn1.addEventListener('click',sendData );
 let btn2 = document.getElementById('send_button-led');
-btn.addEventListener('click',btnc = 3 );
+btn.addEventListener('click',btnc = 3; );
 btn2.addEventListener('click',sendData );
 
 
