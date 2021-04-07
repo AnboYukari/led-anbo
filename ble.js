@@ -127,11 +127,11 @@ function sendDataBlue(e)
 let btn = document.getElementById('send_button');
 btn.addEventListener('click',sendData );
 let btnBlue = document.getElementById('send_button-blue');
-btn1.addEventListener('click',sendDataBlue );
+btnBlue.addEventListener('click',sendDataBlue );
 let btnRed = document.getElementById('send_button-led');
-btn2.addEventListener('click',sendDataRed );
+btnRed.addEventListener('click',sendDataRed );
 let btnGreen = document.getElementById('send_button-green');
-btn2.addEventListener('click',sendDataGreen );
+btnGreen.addEventListener('click',sendDataGreen );
 
 async function sleep(ms) {
   return new Promise((resolve) => {
