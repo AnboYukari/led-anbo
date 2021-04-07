@@ -87,7 +87,7 @@ function sendDataBlue(e)
       const encoder = new TextEncoder('utf-8');
       let ch = characteristics[0];
      
-      ch.writeValue(encoder.encode("Data from PC blue")).then(
+      ch.writeValue(encoder.encode("Blue")).then(
         char => {ch.startNotifications();}
       );
     }
@@ -102,7 +102,22 @@ function sendDataRed(e)
       const encoder = new TextEncoder('utf-8');
       let ch = characteristics[0];
      
-      ch.writeValue(encoder.encode("Data from PC red")).then(
+      ch.writeValue(encoder.encode("Red")).then(
+        char => {ch.startNotifications();}
+      );
+    }
+  }
+}
+
+function sendDataBlue(e)
+{
+  if ( isConnected && characteristics != null ){
+    if ( characteristics[0] != null ){
+
+      const encoder = new TextEncoder('utf-8');
+      let ch = characteristics[0];
+     
+      ch.writeValue(encoder.encode("Blue")).then(
         char => {ch.startNotifications();}
       );
     }
@@ -111,10 +126,12 @@ function sendDataRed(e)
 
 let btn = document.getElementById('send_button');
 btn.addEventListener('click',sendData );
-let btn1 = document.getElementById('send_button-blue');
+let btnBlue = document.getElementById('send_button-blue');
 btn1.addEventListener('click',sendDataBlue );
-let btn2 = document.getElementById('send_button-led');
+let btnRed = document.getElementById('send_button-led');
 btn2.addEventListener('click',sendDataRed );
+let btnGreen = document.getElementById('send_button-green');
+btn2.addEventListener('click',sendDataGreen );
 
 async function sleep(ms) {
   return new Promise((resolve) => {
