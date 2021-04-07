@@ -87,7 +87,7 @@ function sendDataBlue(e)
       const encoder = new TextEncoder('utf-8');
       let ch = characteristics[0];
      
-      ch.writeValue(encoder.encode("Blue")).then(
+      ch.writeValue(encoder.encode("Data Blue")).then(
         char => {ch.startNotifications();}
       );
     }
@@ -102,7 +102,7 @@ function sendDataRed(e)
       const encoder = new TextEncoder('utf-8');
       let ch = characteristics[0];
      
-      ch.writeValue(encoder.encode("Red")).then(
+      ch.writeValue(encoder.encode("Data Red")).then(
         char => {ch.startNotifications();}
       );
     }
@@ -117,7 +117,7 @@ function sendDataGreen(e)
       const encoder = new TextEncoder('utf-8');
       let ch = characteristics[0];
      
-      ch.writeValue(encoder.encode("Green")).then(
+      ch.writeValue(encoder.encode("Data Green")).then(
         char => {ch.startNotifications();}
       );
     }
