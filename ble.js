@@ -109,7 +109,7 @@ function sendDataRed(e)
   }
 }
 
-function sendDataBlue(e)
+function sendDataGreen(e)
 {
   if ( isConnected && characteristics != null ){
     if ( characteristics[0] != null ){
@@ -117,7 +117,7 @@ function sendDataBlue(e)
       const encoder = new TextEncoder('utf-8');
       let ch = characteristics[0];
      
-      ch.writeValue(encoder.encode("Blue")).then(
+      ch.writeValue(encoder.encode("Green")).then(
         char => {ch.startNotifications();}
       );
     }
